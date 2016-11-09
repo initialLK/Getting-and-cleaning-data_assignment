@@ -29,3 +29,25 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration.
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
+
+
+#Procedures to create tidy data file
+The following ‘train’ files of data from the directory \uci were read into R uci/train/X_train.txt uci/train/y_train.txt uci/train/subject_train.txt
+
+These data were then combined together, by combining the columns together, to create a new data table (called “train”)
+
+Then, the following ‘test’ files of data from the directory \uci were read into R uci/test/X_train.txt uci/test/y_train.txt uci/test/subject_train.txt
+
+These data were also combined together, by combining the columns together, to create a new data table (called “test”).
+
+The two data tables, “train” and “test”, were combined together by joining the rows of these tables together.
+
+The column of subjects was labeled “subject”. The column of activities was labeled “activity”.
+
+The activity numbers are replaced with their respective activity labels. The columns were labeled with their respective column names from the uci/features.txt file.
+
+The tidy data set is this complete and saved as tidydata.csv in the \uci folder.
+
+The R commands for tidying the data, extracting mean and standard deviation columns and calculating variable averages can be found in the following script.
+
+Run_analysis.R
